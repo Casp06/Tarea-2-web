@@ -1,0 +1,32 @@
+@page "/ej07"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 7</PageTitle>
+
+<h3>ejercicio 7</h3>
+
+<p>Retornar el codigo ASCCI asociado a el numero</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero</label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" @onclick="Calcular">Contar</button>
+</div>
+<div>
+    El codigo ASCCI es: @resultado
+</div>
+
+
+@code{
+    private int numero;
+    private int  resultado;
+    
+
+    private void Calcular (){
+        char digito = numero.ToString()[0];
+        resultado = (int)digito;
+
+    }
+}

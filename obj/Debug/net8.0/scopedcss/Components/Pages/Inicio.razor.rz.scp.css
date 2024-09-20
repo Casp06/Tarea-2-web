@@ -1,0 +1,107 @@
+.card[b-o6gatc15ls]::after {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 35px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    content: '';
+    z-index: -1;
+}
+a.card[b-o6gatc15ls] {
+    text-decoration: none;
+}
+
+.card[b-o6gatc15ls] {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+}
+.card[b-o6gatc15ls] {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: .25rem;
+}
+
+.box-shadow[b-o6gatc15ls] {
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+}
+
+.ml-auto[b-o6gatc15ls], .mx-auto[b-o6gatc15ls] {
+    margin-left: auto !important;
+}
+.mr-auto[b-o6gatc15ls], .mx-auto[b-o6gatc15ls] {
+    margin-right: auto !important;
+}
+.rounded-circle[b-o6gatc15ls] {
+    border-radius: 50% !important;
+}
+.bg-white[b-o6gatc15ls] {
+    background-color: #fff !important;
+}
+
+.ml-auto[b-o6gatc15ls], .mx-auto[b-o6gatc15ls] {
+    margin-left: auto !important;
+}
+
+.mr-auto[b-o6gatc15ls], .mx-auto[b-o6gatc15ls] {
+    margin-right: auto !important;
+}
+.d-block[b-o6gatc15ls] {
+    display: block !important;
+}
+img[b-o6gatc15ls], figure[b-o6gatc15ls] {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.card-text[b-o6gatc15ls] {
+    padding-top: 12px;
+    color: #8c8c8c;
+}
+
+.text-sm[b-o6gatc15ls] {
+    font-size: 12px !important;
+}
+p[b-o6gatc15ls], .p[b-o6gatc15ls] {
+    margin: 0 0 16px;
+}
+
+.card-title[b-o6gatc15ls] {
+    margin: 0;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.pt-1[b-o6gatc15ls], .py-1[b-o6gatc15ls] {
+    padding-top: .25rem !important;
+}
+
+.head-icon[b-o6gatc15ls]{
+    margin-top:18px;
+    color:#FF4500
+}
+
+h1[b-o6gatc15ls] {
+    color: blue;
+}

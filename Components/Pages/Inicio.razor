@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<PageTitle>Inicio</PageTitle>
+<div class="text-end">
+    <NavLink class="btn btn-primary" href="acerca_de">Acerca de</NavLink>
+</div>
+<h4>Selececiona el ejercicio que quieres ver</h4>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<section class="container pt-3 mb-3">
+    <h2 class="h3 block-title text-center">What we do<small>Whatever we do, we do with your end user in mind </small></h2>
+    <div class="row pt-5 mt-30">
+        @foreach (var ejercicio in Ejercicios){
+            <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+                <a class="card" href="@ejercicio.Url">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                    <i class="@ejercicio.Icono fa-3x head-icon"></i>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1">@ejercicio.Titulo</h3>
+                        <p class="card-text text-sm">@ejercicio.Descripcion</p>
+                        <span class="text-sm text-uppercase font-weight-bold">Pruebalo<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+</section>
+
+@code{
+    public class Ejercicio
+{
+    public string Titulo { get; set; } = "";
+    public string Icono { get; set; } = "";
+    public string Descripcion { get; set; } = "";
+    public string Url { get; set; } = "";
+}
+
+    private List<Ejercicio> Ejercicios = new List<Ejercicio>
+    {
+        new Ejercicio { Titulo = "Ejercicio 1", Icono = "fa fa-user", Descripcion = "Construir una función que reciba como parámetro un entero y retorne su último dígito.", Url = "ej01" },
+        new Ejercicio { Titulo = "Ejercicio 3", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos.", Url = "ej03" },
+        new Ejercicio { Titulo = "Ejercicio 5", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos primos.", Url = "ej05" },
+        new Ejercicio { Titulo = "Ejercicio 7", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne el codigo ASCCI asociado a el.", Url = "ej07" },
+        new Ejercicio { Titulo = "Ejercicio 9", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y Calcular el factorial.", Url = "ej09" },
+    };
+}

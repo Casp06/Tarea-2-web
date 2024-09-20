@@ -1,0 +1,35 @@
+@page "/ej05"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 5</PageTitle>
+
+<h3>ejercicio 5</h3>
+
+<p>Cantidad de dígitos primos de un numero</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero</label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" @onclick="Calcular">Contar</button>
+</div>
+<div>
+    La cantida de numeros primos es: @resultado
+</div>
+
+
+@code{
+    private int numero;
+    private int  resultado = 0;
+    
+
+    private void Calcular (){
+        resultado = 0;
+        foreach (char digito in numero.ToString()){
+            if("2357".Contains(digito)){
+                resultado++;
+            }
+        }
+    }
+}

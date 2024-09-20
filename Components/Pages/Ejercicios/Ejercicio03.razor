@@ -1,0 +1,29 @@
+@page "/ej03"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 3</PageTitle>
+
+<h3>ejercicio 3</h3>
+
+<p>Cantidad de dígitos de un numero</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero</label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" @onclick="Calcular">Contar</button>
+</div>
+<div>
+    La cantida de numero es: @resultado
+</div>
+
+
+@code{
+    string numero = "";
+    string resultado = "";
+
+    private void Calcular (){
+        resultado = numero.Length.ToString();
+    }
+}

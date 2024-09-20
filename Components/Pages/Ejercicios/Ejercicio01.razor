@@ -1,0 +1,29 @@
+@page "/ej01"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 1</PageTitle>
+
+<h3>ejercicio 1</h3>
+
+<p>El ultimo digito de un entero</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero</label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" @onclick="Calcular">Calcular</button>
+</div>
+<div >
+    El ultimo digito es @resultado
+</div>
+
+
+@code{
+    private int numero = 0;
+    string resultado = "";
+
+    private void Calcular (){
+        resultado = (numero % 10).ToString();
+    }
+}
