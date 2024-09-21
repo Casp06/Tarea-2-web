@@ -1,0 +1,74 @@
+@page "/ej031"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 31</PageTitle>
+
+<h3>ejercicio 31</h3>
+<p>Calcular promedio.</p>
+<p>Ingrese 10 números:</p>
+<div class="row">
+
+        <div class="form-group col-1">
+            <label for="txNumero_0">Número 0: </label>
+            <input type="number" class="form-control" id="txNumero_0" @bind="numeros[0]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_1">Número 1: </label>
+            <input type="number" class="form-control" id="txNumero_1" @bind="numeros[1]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_2">Número 2: </label>
+            <input type="number" class="form-control" id="txNumero_2" @bind="numeros[2]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_3">Número 3: </label>
+            <input type="number" class="form-control" id="txNumero_3" @bind="numeros[3]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_4">Número 4: </label>
+            <input type="number" class="form-control" id="txNumero_4" @bind="numeros[4]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_5">Número 5: </label>
+            <input type="number" class="form-control" id="txNumero_5" @bind="numeros[5]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_6">Número 6: </label>
+            <input type="number" class="form-control" id="txNumero_6" @bind="numeros[6]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_7">Número 7: </label>
+            <input type="number" class="form-control" id="txNumero_7" @bind="numeros[7]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_8">Número 8: </label>
+            <input type="number" class="form-control" id="txNumero_8" @bind="numeros[8]" />
+        </div>
+        <div class="form-group col-1">
+            <label for="txNumero_9">Número 9: </label>
+            <input type="number" class="form-control" id="txNumero_9" @bind="numeros[9]" />
+        </div>        
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+</div>
+
+@code {
+    private int[] numeros = new int[10];
+    private double resultado;
+
+    private void Calcular(){
+
+        int contador = 0;
+        foreach (int num in numeros)
+        {
+            contador += num;
+        }
+
+        resultado = (double)contador/numeros.Length;
+        } 
+    }

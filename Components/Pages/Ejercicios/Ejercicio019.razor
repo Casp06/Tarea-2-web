@@ -1,0 +1,36 @@
+@page "/ej019"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 19</PageTitle>
+
+<h3>ejercicio 19</h3>
+
+<p>Verificar si el número tiene al menos 3 dígitos.</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero: </label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+</div>
+
+
+@code{
+    private int numero;
+    private int  resultado;
+    
+
+    private void Calcular (){
+        if(numero >= 100){
+            resultado = 1;
+        }else{
+            resultado = 0;
+        }
+        
+    }
+}

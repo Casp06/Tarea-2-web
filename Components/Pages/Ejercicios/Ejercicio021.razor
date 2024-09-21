@@ -1,0 +1,41 @@
+@page "/ej021"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 21</PageTitle>
+
+<h3>ejercicio 21</h3>
+
+<p>Verificar si el primer dígito es igual al ultimo.</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero: </label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+</div>
+
+
+@code{
+    private int numero;
+    private int  resultado;
+    
+
+    private void Calcular (){
+        string numerostr = numero.ToString();
+
+        char primero = numerostr[0];
+        char ultimo = numerostr[numerostr.Length - 1];
+
+        if(primero == ultimo){
+            resultado = 1;
+        }else{
+            resultado = 0;
+        }
+        
+    }
+}

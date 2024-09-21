@@ -4,11 +4,10 @@
 <div class="text-end">
     <NavLink class="btn btn-primary" href="acerca_de">Acerca de</NavLink>
 </div>
-<h4>Selececiona el ejercicio que quieres ver</h4>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <section class="container pt-3 mb-3">
-    <h2 class="h3 block-title text-center">What we do<small>Whatever we do, we do with your end user in mind </small></h2>
+    <h2 class="h3 block-title text-center">Selececiona el ejercicio que quieres ver</h2>
     <div class="row pt-5 mt-30">
         @foreach (var ejercicio in Ejercicios){
             <div class="col-lg-4 col-sm-6 mb-30 pb-5">
@@ -39,10 +38,48 @@
 
     private List<Ejercicio> Ejercicios = new List<Ejercicio>
     {
-        new Ejercicio { Titulo = "Ejercicio 1", Icono = "fa fa-user", Descripcion = "Construir una función que reciba como parámetro un entero y retorne su último dígito.", Url = "ej01" },
-        new Ejercicio { Titulo = "Ejercicio 3", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos.", Url = "ej03" },
-        new Ejercicio { Titulo = "Ejercicio 5", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos primos.", Url = "ej05" },
-        new Ejercicio { Titulo = "Ejercicio 7", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y retorne el codigo ASCCI asociado a el.", Url = "ej07" },
-        new Ejercicio { Titulo = "Ejercicio 9", Icono = "fa fa-user-circle-o", Descripcion = "Construir una función que reciba como parámetro un entero y Calcular el factorial.", Url = "ej09" },
+        new Ejercicio { Titulo = "Ejercicio 1", Icono = "bi bi-repeat", Descripcion = "Construir una función que reciba como parámetro un entero y retorne su último dígito.", Url = "ej01" },
+        new Ejercicio { Titulo = "Ejercicio 3", Icono = "bi bi-layers", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos.", Url = "ej03" },
+        new Ejercicio { Titulo = "Ejercicio 5", Icono = "bi bi-cloud", Descripcion = "Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos primos.", Url = "ej05" },
+        new Ejercicio { Titulo = "Ejercicio 7", Icono = "bi bi-terminal", Descripcion = "Construir una función que reciba como parámetro un entero y retorne el codigo ASCCI asociado a el.", Url = "ej07" },
+        new Ejercicio { Titulo = "Ejercicio 9", Icono = "bi bi-code ", Descripcion = "Construir una función que reciba como parámetro un entero y Calcular el factorial.", Url = "ej09" },
+        new Ejercicio { Titulo = "Ejercicio 11", Icono = "bi bi-braces ", Descripcion = "Construir una función que reciba como parámetro un entero y un digito y retorne 1 si dicho numero es multiplo de dicho digito y 0 si no es asi.", Url = "ej011" },
+        new Ejercicio { Titulo = "Ejercicio 13", Icono = "bi bi-cpu ", Descripcion = "Construir una función que reciba como parámetro un entero y un digito y retorne la cantidad de veces que se encuentra dicho digito en un dicho entero.", Url = "ej013" },
+        new Ejercicio { Titulo = "Ejercicio 15", Icono = "bi bi-hdd ", Descripcion = "Construir una función que reciba como parámetro dos entero y retorne 1 si el primer numero es multiplo del segundo y 0 si no.", Url = "ej015" },
+        new Ejercicio { Titulo = "Ejercicio 17", Icono = "bi bi-folder ", Descripcion = "Construir una función que reciba como parámetro un entero y retorne 1 si corresponde al código ASCII de un dígito (Los códigos ASCII de las letras minúsculas van desde 48 que es el código del dígito 0 hasta 57 que es el código del dígito 9). Deberá retornar 0 si no es así.", Url = "ej017" },
+        new Ejercicio { Titulo = "Ejercicio 19", Icono = "bi bi-file-earmark-code ", Descripcion = "Construir una función que reciba como parámetro un entero y retome 1 si dicho valor es un número de minimo 3 dígitos. Deberá retornar 0 si no es así.", Url = "ej019" },
+        new Ejercicio { Titulo = "Ejercicio 21", Icono = "bi bi-diagram-2 ", Descripcion = "Construir una función que reciba como parámetro un entero y retorne 1 si en dicho valor el primer dígito es igual al último. Deberá retorna 0 si no es así", Url = "ej021" },
+        new Ejercicio { Titulo = "Ejercicio 23", Icono = "bi bi-diagram-3 ", Descripcion = "Construir una función que reciba como parametro dos enteros y retorne 1 si la diferencia entre los dos valores es un número primo. Deberá retornar 0 si no es asi", Url = "ej023" },
+        new Ejercicio { Titulo = "Ejercicio 25", Icono = "bi bi-lightning ", Descripcion = "Construir una función que recita como parámetro un entero y un digito menor o igual a 5 y retorne el digito del número que se encuentre en la posición especificada por el digito que llego como parametro", Url = "ej025" },
+        new Ejercicio { Titulo = "Ejercicio 27", Icono = "bi bi-gear ", Descripcion = "Construir una función que reciba como parámetro un vector de 10 posiciones enteras y retorne la posición en la cual se encuentra el mayor de los datos del vector .", Url = "ej027" },
+        new Ejercicio { Titulo = "Ejercicio 29", Icono = "bi bi-filetype-js ", Descripcion = "Construir una función que reciba como parámetro un vector de 10 posiciones enteras y retorne la cantidad de números que pertenecen a los 30 primeros elementos de la serie de Fibonacci .", Url = "ej029" },
+        new Ejercicio { Titulo = "Ejercicio 31", Icono = "bi bi-terminal-split ", Descripcion = "Construir una función que reciba como parametro un vector de 10 posiciones erteras y retome el promedio entero del vector .", Url = "ej031" },
+        new Ejercicio { Titulo = "Ejercicio 33", Icono = "bi bi-vector-pen ", Descripcion = "Construir una función que reciba como parámetros un vector de 10 posiciones enteras y us valor entero y retome 1 si dicho valor entero se encuentra en et vector. Deberá retornar 0 si no es asi .", Url = "ej033" },
+        new Ejercicio { Titulo = "Ejercicio 35", Icono = "bi bi-calculator ", Descripcion = "", Url = "ej035" },
+        new Ejercicio { Titulo = "Ejercicio 37", Icono = "bi bi-flowchart ", Descripcion = "", Url = "ej037" },
+        new Ejercicio { Titulo = "Ejercicio 39", Icono = "bi bi-code-slash ", Descripcion = "", Url = "ej039" },
+        new Ejercicio { Titulo = "Ejercicio 41", Icono = "bi bi-filetype-html ", Descripcion = "", Url = "ej041" },
+        new Ejercicio { Titulo = "Ejercicio 43", Icono = "bi bi-link ", Descripcion = "", Url = "ej043" },
+        new Ejercicio { Titulo = "Ejercicio 45", Icono = "bi bi-braces-asterisk ", Descripcion = "", Url = "ej045" },
+        new Ejercicio { Titulo = "Ejercicio 47", Icono = "bi bi-check-square ", Descripcion = "", Url = "ej047" },
+        new Ejercicio { Titulo = "Ejercicio 49", Icono = "bi bi-grid ", Descripcion = "", Url = "ej049" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     };
 }

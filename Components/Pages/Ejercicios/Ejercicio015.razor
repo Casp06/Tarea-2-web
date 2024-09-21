@@ -1,0 +1,47 @@
+@page "/ej015"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 15</PageTitle>
+
+<h3>ejercicio 15</h3>
+
+<p>Verificar si es multiplo.</p>
+
+<div class="form-group">
+    <label for="txNumero">Numero: </label>
+    <input type="number" class="form-control" id="txNumero" @bind="numero" />
+</div>
+<div class="form-group">
+    <label for="txDigito">Segundo numero: </label>
+    <input type="number" class="form-control" id="txDigito" @bind="numero2" />
+</div>
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+</div>
+
+
+@code{
+    private int numero;
+    private int numero2;
+    private int  resultado;
+    
+
+    private void Calcular (){
+        if (Multiplo(numero,numero2) == 0){
+            resultado = 1;
+        }else{
+            resultado = 0;
+        }
+        
+    }
+    private int Multiplo(int n, int n2){
+        if (n2 == 0){
+            return 0;
+        }else{
+            return n % n2;
+        }
+    }
+}
