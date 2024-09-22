@@ -1,0 +1,44 @@
+@page "/ej037"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 37</PageTitle>
+
+<h3>ejercicio 37</h3>
+
+<p>Encuentre el mayor número primo que termine en 3 almacenado en el vector.</p>
+
+<div class="row">
+
+        <div class="form-group col-6">
+            <label for="txNumero_0">Primer número: </label>
+            <input type="number" class="form-control" id="txNumero_0" @bind="numero" />
+        </div>
+        <div class="form-group col-6">
+            <label for="txNumero_1">Segundo número: </label>
+            <input type="number" class="form-control" id="txNumero_1" @bind="numero2" />
+        </div>  
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+
+</div>
+
+@code {
+    private int numero;
+    private int numero2;
+    private int resultado;
+
+    private void Calcular(){
+
+        resultado = 1;
+        for (int i = 0; i < numero2; i++){
+            resultado *= numero;
+        }
+
+
+    }
+    }

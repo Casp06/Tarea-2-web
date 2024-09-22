@@ -1,0 +1,129 @@
+@page "/ej049"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 49</PageTitle>
+
+<h3>ejercicio 49</h3>
+
+<p>Encuentra el valor de la moda de la matriz.</p>
+
+<div class="row">
+
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_0" @bind="numeros[0]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_1" @bind="numeros[1]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_2" @bind="numeros[2]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_3" @bind="numeros[3]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_4" @bind="numeros[4]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_5" @bind="numeros[5]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_6" @bind="numeros[6]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_7" @bind="numeros[7]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_8" @bind="numeros[8]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_9" @bind="numeros[9]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_10" @bind="numeros[10]" />
+        </div>  
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_11" @bind="numeros[11]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_12" @bind="numeros[12]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_13" @bind="numeros[13]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_14" @bind="numeros[14]" />
+        </div>
+        <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_15" @bind="numeros[15]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_16" @bind="numeros[16]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_17" @bind="numeros[17]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_18" @bind="numeros[18]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_19" @bind="numeros[19]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_20" @bind="numeros[20]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_21" @bind="numeros[21]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_22" @bind="numeros[22]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_23" @bind="numeros[23]" />
+        </div>
+                <div class="form-group col-2 m-lg-2">
+            <input type="number" class="form-control" id="txNumero_24" @bind="numeros[24]" />
+        </div>
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+</div>
+
+@code {
+    private int[] numeros = new int[25];
+    private int resultado; 
+    private void Calcular(){
+            var countMap = new Dictionary<int, int>();
+            resultado = 0; 
+
+            foreach (var num in numeros){
+                if (countMap.ContainsKey(num)){
+                    countMap[num]++;
+                }
+                else{
+                    countMap[num] = 1;
+                }
+            }
+
+            int maxCount = 0; 
+            foreach (var kvp in countMap){
+                if (kvp.Value > maxCount){
+                    maxCount = kvp.Value;
+                    resultado = kvp.Key;
+                }
+            }
+
+            if (maxCount == 1){
+                resultado = 0; 
+            }
+
+    }
+}
+
+
+
+

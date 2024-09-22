@@ -1,0 +1,104 @@
+@page "/ej047"
+@rendermode InteractiveServer
+
+<PageTitle>ejercicio 47</PageTitle>
+
+<h3>ejercicio 47</h3>
+
+<p>Encuentrea el número de la columna en donde se encuentre por primera vez el número mayor de la matriz.</p>
+
+<div class="row">
+
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_0" @bind="numeros[0]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_1" @bind="numeros[1]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_2" @bind="numeros[2]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_3" @bind="numeros[3]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_4" @bind="numeros[4]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_5" @bind="numeros[5]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_6" @bind="numeros[6]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_7" @bind="numeros[7]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_8" @bind="numeros[8]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_9" @bind="numeros[9]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_10" @bind="numeros[10]" />
+        </div>  
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_11" @bind="numeros[11]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_12" @bind="numeros[12]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_13" @bind="numeros[13]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_14" @bind="numeros[14]" />
+        </div>
+        <div class="form-group col-3">
+            <input type="number" class="form-control" id="txNumero_15" @bind="numeros[15]" />
+        </div>
+</div>
+
+<div class="form-group mt-2">
+    <button class="btn btn-primary" @onclick="Calcular">Verificar</button>
+</div>
+<div>
+    Resultado: @resultado
+
+
+</div>
+
+
+@code {
+    private int[] numeros = new int[16];
+    private int resultado;
+
+    private void Calcular(){
+        int[,] matriz = new int[4, 4];
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                matriz[i, j] = numeros[i * 4 + j];
+            }
+        }
+
+        int maxNumero = int.MinValue;
+        int columnaMax = -1;
+
+        
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                if (matriz[i, j] > maxNumero)
+                {
+                    maxNumero = matriz[i, j];
+                    columnaMax = j; 
+                }
+            }
+        }
+
+        resultado = columnaMax; 
+    }
+}
