@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\C#\\tarea2\\wwwroot\\image\\perfil1.PNG",
+      "PackagePath": "staticwebassets\\image\\perfil1.PNG"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.tarea2.props",
       "PackagePath": "build\\tarea2.props"
     },

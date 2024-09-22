@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9SB/E/gJXIJbm6v2MYN47g2Oe2QWBv0zoHO3R3gaVx0=",
+  "Hash": "rn2dw2RiPlZv/yeTxcJ9yK4MuJFXxSuxp+a/Wj6IQQ4=",
   "Source": "tarea2",
   "BasePath": "_content/tarea2",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\C#\\tarea2\\wwwroot\\image\\perfil1.PNG",
+      "SourceId": "tarea2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#\\tarea2\\wwwroot\\",
+      "BasePath": "_content/tarea2",
+      "RelativePath": "image/perfil1.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\perfil1.PNG"
     }
   ]
 }
